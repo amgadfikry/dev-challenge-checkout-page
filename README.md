@@ -51,7 +51,7 @@
 ### Built With
 
 - this challenge built with pure HTML, CSS and JavaScript.
-- 
+
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
