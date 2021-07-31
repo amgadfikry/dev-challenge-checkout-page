@@ -30,7 +30,7 @@ decrease.forEach((el,index)=>{
         else{
             number[index].innerHTML=0;
         }
-        if(parseInt(number[index].innerHTML) === 0 ){
+        if(net.innerHTML === "$15"){
             net.innerHTML = "$0"
         }
     })
