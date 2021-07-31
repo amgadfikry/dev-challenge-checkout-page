@@ -14,7 +14,6 @@ function checkNet (){
         })
         net.innerHTML = `$${total}`
 }
-checkNet();
 
 increase.forEach((el,index)=>{
     el.addEventListener("click", function(){
