@@ -1,0 +1,299 @@
+/*start root style*/
+:root{
+    font-size: calc( 0.5em + 1vw);
+}
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+/*end root style*/
+
+/*start media query*/
+@media (min-width:768px){
+    .container{
+        width:750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width:970px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width:1170px;
+    }
+}
+.container{
+    margin: auto;
+}
+/* end media query*/
+/*start form style*/
+    h1{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .container{
+        padding:  10px;
+        display: flex;
+    }
+    .check{
+        flex: 2;
+        padding: 20px 50px 20px 0px;
+    }
+    .container section{
+        margin-bottom: 30px;
+    }
+    .container section h3{
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .container section .input{
+        padding: 15px 0px;
+        position: relative;
+    }
+    .container section .input label{
+        display: block;
+    }
+    .container section .input i{
+        position: absolute;
+        color: #777;
+        top: 50%;
+        left: 10px;
+    }
+    .container section .input input{
+        width: 100%;
+        border: 1px solid #777;
+        border-radius: 10px;
+        padding: 10px 10px 10px 40px;
+        display: block;
+    }
+    .container section .input input:focus{
+        caret-color: brown;
+        outline: 0;
+        background-color: rgb(241, 241, 241);
+    }
+    .container section .input input::placeholder{
+        color: #777;
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+    .container section .input input:not(:focus){
+        color: black;
+        font-weight: 400;
+    }
+    .container section .input input:valid , select:valid , .container section .input input:valid:focus{
+        border: 1px solid rgb(47, 180, 47);
+    }
+    .container section .input input:valid:focus{
+        background-color: rgb(230, 247, 230);
+    }
+    select:invalid:focus , .container section .input input:invalid:focus{
+        border: 1px solid rgb(235, 95, 142);
+        background-color: rgb(247, 236, 236);
+    }
+    .container .ship .two {
+        display: flex;
+        align-items: center;
+    }
+    .container .ship .two .input:last-of-type{
+        margin-left: auto;
+    }
+    @media (max-width:400px){
+        .container .ship .two {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .container .ship .two .input:last-of-type{
+            margin-left: 0;
+        }
+    }
+    .container select{
+        padding: 10px 10px 10px 40px;
+        border-radius: 10px;
+    }
+    .container select:focus{
+        outline: 0;
+    }
+    .container .confirm{
+        display: flex;
+        padding: 10px 0px;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .container .confirm input{
+        transform: scale(1.4);
+        margin-right: 10px;
+        display: block;
+    }
+    .submit{
+        text-align: right;
+    }
+    .submit input{
+        border-radius: 10px;
+        background-color: orange;
+        padding: 15px 25px;
+        border: 0;
+        color: white;
+        transition: 0.3s;
+    }
+    .submit input:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+/*end form style*/
+
+/*start items*/
+.items{
+    flex: 1;
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    height: fit-content;
+}
+.items .card{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.items .card img{
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+.items .card  .info{
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+.items .card  .info h3{
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.items .card  .info p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: orange;
+}
+.items .card  .info p span{
+    font-weight: 300;
+    text-decoration: line-through;
+    color: black;
+    display: inline-block;
+    margin-left: 10px;
+}
+.items .card  .info .count{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #777;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+.items .card  .info .count .min , .items .card  .info .count .max{
+    background-color: rgb(206, 206, 206);
+    font-weight: 700;
+    padding: 7px;
+    border-radius: 3px;
+    color: #777;
+    transition: 0.3s;
+}
+.items .card  .info .count .min:hover , .items .card  .info .count .max:hover{
+    cursor: pointer;
+    color: white;
+    background-color: orange;
+}
+.items .card  .info .count .num{
+    flex: 1;
+    font-weight: 600;
+}
+.items .shipping:not(:last-child){
+    margin-top: 50px;
+    border-top: 1px solid #777;
+    border-bottom:  1px solid #777;
+}
+.items .shipping{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.items .shipping h3{
+    font-size: 0.9rem;
+    margin: 0;
+}
+.items .shipping div{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@media (max-width:991px){
+    h1{
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .check{
+        order: 2;
+        padding-right: 10px;
+    }
+    .items{
+        order: 1;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .items .card{
+        width: 50%;
+    }
+    .items .shipping{
+        width: 100%;
+    }
+    .items .shipping:not(:last-child){
+        margin-top: 40px;
+    }
+}
+@media (max-width:620px){
+    .items{
+        display: block;
+    }
+    .items .card{
+        width: 100%;
+    }
+}
+/*end items*/
+
+/*start footer*/
+footer{
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 30px 10px 10px;
+}
+footer a{
+    color: violet;
+}
+/*end footer*/
+
+/*valid page*/
+.page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(47, 180, 47);
+}
+.valid{
+    font-size: 2rem;
+    font-weight: 600px;
+    text-transform: capitalize;
+    color: white;
+}

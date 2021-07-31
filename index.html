@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--add meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--add web name-->
+    <title>Checkout Page</title>
+    <!--add web tab favicon-->
+    <link rel="shortcut icon" type="image/jpg" href="./images/devchallenges.png">
+    <!--css style file-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--render all browser styles-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!--add fontawesome-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!--add fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--start form-->
+    <div class="container">
+        <h1>Checkout</h1>
+    </div>
+    <div class="container">
+        <div class="check">
+            <form action="./valid.html" target="_blank">
+            <section class="contact">
+                <h3>Contact infomation</h3>
+                <div class="input">
+                    <label for="mail">E-mail</label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="mail" placeholder="Enter your email..." required>
+                </div>
+                <div class="input">
+                    <label for="Phone">Phone</label>
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="text" id="Phone" placeholder="Enter your phone...." required maxlength="11" minlength="11" 
+                    pattern="[0]{1}[1-9]{1}[0-9]{9}" title="Please enter phone number formed of 11 number start with 0">
+                </div>
+            </section>
+            <section class="ship">
+                <h3>Shipping address</h3>
+                <div class="input">
+                    <label for="name">Full name</label>
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" placeholder="Enter your name..." required pattern="[A-Za-z]+" maxlength="20"
+                    title="please enter name formed of letters only without special character">
+                </div>
+                <div class="input">
+                    <label for="address">Address</label>
+                    <i class="fas fa-home"></i>
+                    <input type="text" id="address" placeholder="Your address.." required>
+                </div>
+                <div class="input">
+                    <label for="City">City</label>
+                    <i class="fas fa-city"></i>
+                    <input type="text" id="City" placeholder="Your city.." required pattern="[A-Za-z]+" maxlength="20">
+                </div>
+                <div class="two">
+                    <div class="input">
+                        <label for="Country">Country</label>
+                        <i class="fas fa-globe-africa"></i>
+                        <select name="Country" required id="Country">
+                            <option value="" selected disabled>Your country..</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="KSA">KSA</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Syria">Syria</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label for="code">Postal code</label>
+                        <i class="fas fa-mail-bulk"></i>
+                        <input type="text" id="code" placeholder="Your postal code.." pattern="[0-9]{5}" maxlength="5" minlength="5" required 
+                        title="please enter postal code formed of 5 numbers">
+                    </div>
+                </div>
+                <div class="confirm">
+                    <input type="checkbox" id="check" placeholder="Your city..">
+                    <label for="check">Save this information for next time</label>
+                </div>
+            </section>
+            <div class="submit">
+                <input type="submit" value="Continue">
+            </div>
+        </form>
+    </div>
+    <!--start ship-->
+        <section class="items">
+            <div class="card">
+                <img src="./images/photo1.png" alt="bag">
+                <div class="info">
+                    <h3>Vintage Backbag</h3>
+                    <p data-price="54.99">$54.99 <span>$94.99</span></p>
+                    <div class="count">
+                        <div class="min">-</div>
+                        <div class="num">0</div>
+                        <div class="max">+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/photo2.png" alt="bag">
+                <div class="info">
+                    <h3>Levi Shoes</h3>
+                    <p data-price="74.99">$74.99 <span>$124.99</span></p>
+                    <div class="count">
+                        <div class="min">-</div>
+                        <div class="num">0</div>
+                        <div class="max">+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="break"></div>
+            <div class="shipping">
+                <h3>Shipping</h3>
+                <div>$15</div>
+            </div>
+            <div class="shipping">
+                <h3>Total</h3>
+                <div class="net" data-net="0">$0</div>
+            </div>
+        </section>
+        <!--end form-->
+    </div>
+
+    <footer>
+        <p>Created by <a href="https://github.com/amgadfikry">Amgad Fikry Mo</a> -
+            Designed by <a href="https://devchallenges.io/">Devchallenge.io</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
